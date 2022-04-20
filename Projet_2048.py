@@ -31,7 +31,7 @@ def grille():
     for i in range(N):
         for j in range(1):
             grille = N*[0]
-            print(grille)
+            #print(grille)
             for i in range(N):
                 for j in range(N):
                     global largeur ,hauteur
@@ -82,6 +82,7 @@ bouton_save.grid(row= 6)
 bouton_load.grid(row= 7)
 
 grille()
+
 
 
 # Appelle de fonction
