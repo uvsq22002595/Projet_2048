@@ -14,16 +14,33 @@ racine.title("Jeu 2048")
 # Variables
 HAUTEUR = 600
 LARGEUR = 600
+
+largeur = 0
+hauteur = 0
 N = 4
 o = 0
+liste = [2]
 
-x1 = 0
-x2 = 0
+'''x1 = 0
+x2 = 1
 y1 = 0 
-y2 = 0
+y2 = 0'''
 # Fonction
 
-def creation_grille():
+def grille():
+    for i in range(N):
+        for j in range(1):
+            grille = N*[0]
+            print(grille)
+            for i in range(N):
+                for j in range(N):
+                    global largeur ,hauteur
+                    largeur = LARGEUR // 4
+                    hauteur  = HAUTEUR // 4 
+                    canvas.create_rectangle((i * largeur, j * hauteur), ((i+1)* largeur, (j+1)* hauteur) , fill = "grey")
+            
+
+'''def creation_grille():
     global N
     grille = []
     Largeur = LARGEUR // N
@@ -38,10 +55,9 @@ def creation_grille():
             x2 = (x+1)*Largeur
             y2 = (y+1)*Hauteur
             carre = canvas.create_rectangle((x1,y1), (x2,y2), fill = "red")
-            grille[x][y] = carre
+            grille[x][y] = carre'''
 
-# Appelle de fonction
-creation_grille()
+
     
 
 # Fenêtre graphiques
@@ -65,4 +81,17 @@ bouton_exit.grid(row= 5)
 bouton_save.grid(row= 6)
 bouton_load.grid(row= 7)
 
+grille()
+
+
+# Appelle de fonction
+#creation_grille()
+
 racine.mainloop()
+
+
+
+
+
+
+
